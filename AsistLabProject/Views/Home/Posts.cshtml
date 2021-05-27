@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Posts>
+
+@*@{
+    ViewData["Title"] = "Home";
+}*@
+
+<div class="text-center">
+    <table id="postsTable" class="table">
+        <thead>
+            <tr>
+                <th scope="col">UserId</th>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var post in Model)
+                {
+                        <tr>
+                            <td>@post.UserId</td>
+                            <td>@post.Id</td>
+                            <td>@post.Title</td>
+                            <td>@post.Body</td>
+                        </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
